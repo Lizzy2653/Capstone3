@@ -32,10 +32,12 @@ public class CategoriesController
     }
 
     // add the appropriate annotation for a get action
+    @GetMapping
     public List<Category> getAll()
     {
         // find and return all categories
-        return null;
+        List<Category> categories = categoryDao.getAllCategories();
+        return categories;
     }
 
     // add the appropriate annotation for a get action
